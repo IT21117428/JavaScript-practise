@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom</title>
+  </head>
+  <body>
+    <button>click</button>
+    <button class="js-btn">Hello</button>
+
+    <script>
+      console.log(document.querySelector("button").innerHTML);
+      const buttonElement = (document.querySelector(".js-btn").innerHTML =
+        "Yoyo");
+      console.log(buttonElement);
+
+      /*document.body.innerHTML = "Kaveeja";
+      document.title = "Sachintha";
+      console.log(typeof document.body);
+      document.body.innerHTML = "<button>Hello</button>";*/
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="displayResult('heads')">Heads</button>
+    <button onclick="displayResult('tails')">Tails</button>
+    <script>
+      let score = JSON.parse(localStorage.getItem("score")) || {
+        wins: 0,
+        losses: 0,
+      };
+
+      function displayResult(guess) {
+        const randomNumber = Math.random();
+
+        let result = randomNumber < 0.5 ? "heads" : "tails";
+
+        let finalResult = guess === result ? "You win" : "You lost";
+
+        console.log(finalResult);
+
+        if (finalResult === "You win") {
+          score.wins += 1;
+        } else if (finalResult === "You lost") {
+          score.losses += 1;
+        }
+
+        console.log(score);
+
+        localStorage.setItem("score", JSON.stringify(score));
+      }
+    </script>
+  </body>
+</html>
