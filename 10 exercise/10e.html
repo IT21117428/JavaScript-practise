@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .gaming-btn {
+        border: none;
+        background-color: rgb(206, 206, 206);
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 5px;
+      }
+
+      .is-gaming {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button
+      class="gaming-btn js-gaming-btn"
+      onclick="
+        const gamingBtn = document.querySelector('.js-gaming-btn');
+        if(!gamingBtn.classList.contains('is-gaming')) {
+            gamingBtn.classList.add('is-gaming');
+        } else
+            gamingBtn.classList.remove('is-gaming');
+        "
+    >
+      Gaming
+    </button>
+    <button
+      class="gaming-btn js-music-btn"
+      onclick="const musicBtn = document.querySelector('.js-music-btn');
+    if(!musicBtn.classList.contains('is-gaming')) {
+        musicBtn.classList.add('is-gaming');
+    } else
+        musicBtn.classList.remove('is-gaming');"
+    >
+      Music
+    </button>
+    <button
+      class="gaming-btn js-tech-btn"
+      onclick="const techBtn = document.querySelector('.js-tech-btn');
+    if(!techBtn.classList.contains('is-gaming')) {
+        techBtn.classList.add('is-gaming');
+    } else
+        techBtn.classList.remove('is-gaming');"
+    >
+      Tech
+    </button>
+  </body>
+</html>

@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
+    <link rel="stylesheet" href="./10i.css" />
+  </head>
   <body>
-    <p class="js-calculation"></p>
+    <p class="js-calculation display"></p>
     <p>
       <button
+        class="button1"
         onclick="
         updateCalculation('1');
       "
@@ -13,6 +16,7 @@
       </button>
 
       <button
+        class="button1"
         onclick="
         updateCalculation('2');
       "
@@ -21,6 +25,7 @@
       </button>
 
       <button
+        class="button1"
         onclick="
         updateCalculation('3');
       "
@@ -29,6 +34,7 @@
       </button>
 
       <button
+        class="button2"
         onclick="
         updateCalculation(' + ');
       "
@@ -39,6 +45,7 @@
 
     <p>
       <button
+        class="button1"
         onclick="
         updateCalculation('4');
       "
@@ -47,6 +54,7 @@
       </button>
 
       <button
+        class="button1"
         onclick="
         updateCalculation('5');
       "
@@ -55,6 +63,7 @@
       </button>
 
       <button
+        class="button1"
         onclick="
         updateCalculation('6');
       "
@@ -63,6 +72,7 @@
       </button>
 
       <button
+        class="button2"
         onclick="
         updateCalculation(' - ');
       "
@@ -73,6 +83,7 @@
 
     <p>
       <button
+        class="button1"
         onclick="
         updateCalculation('7');
       "
@@ -81,6 +92,7 @@
       </button>
 
       <button
+        class="button1"
         onclick="
         updateCalculation('8');
       "
@@ -89,6 +101,7 @@
       </button>
 
       <button
+        class="button1"
         onclick="
         updateCalculation('9');
       "
@@ -97,6 +110,7 @@
       </button>
 
       <button
+        class="button2"
         onclick="
         updateCalculation(' * ');
       "
@@ -107,6 +121,7 @@
 
     <p>
       <button
+        class="button1"
         onclick="
         updateCalculation('0');
       "
@@ -115,6 +130,7 @@
       </button>
 
       <button
+        class="button1"
         onclick="
         updateCalculation('.');
       "
@@ -123,6 +139,7 @@
       </button>
 
       <button
+        class="button1"
         onclick="
         // Note: eval() takes a string and runs it as code.
         // Avoid using eval() in real world projects since
@@ -139,6 +156,7 @@
       </button>
 
       <button
+        class="button2"
         onclick="
         updateCalculation(' / ');
       "
@@ -149,6 +167,7 @@
 
     <p>
       <button
+        class="button1"
         onclick="
         calculation = '';
         displayCalculation();
@@ -160,27 +179,6 @@
         Clear
       </button>
     </p>
-
-    <script>
-      let calculation = localStorage.getItem("calculation") || "";
-
-      displayCalculation();
-
-      function updateCalculation(value) {
-        calculation += value;
-        displayCalculation();
-        localStorage.setItem("calculation", calculation);
-      }
-
-      // Optional: you can also create a function in order
-      // to reuse this code.
-      function saveCalculation() {
-        localStorage.setItem("calculation", calculation);
-      }
-
-      function displayCalculation() {
-        document.querySelector(".js-calculation").innerHTML = calculation;
-      }
-    </script>
+    <script src="./10i.js"></script>
   </body>
 </html>

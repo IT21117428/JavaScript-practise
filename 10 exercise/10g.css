@@ -1,0 +1,13 @@
+.gaming-btn {
+  border: none;
+  background-color: rgb(206, 206, 206);
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.is-gaming {
+  background-color: black;
+  color: white;
+}
