@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      function greeting() {
+        console.log("Hello");
+      }
+      greeting();
+
+      const function1 = function () {
+        console.log("Hello2");
+      };
+
+      function1();
+
+      const object = {
+        name: "function",
+        fun: function () {
+          console.log("Hello3");
+        },
+      };
+
+      object.fun();
+
+      function display(param) {
+        console.log(param);
+      }
+
+      display("Hello4");
+
+      function run(param) {
+        param();
+      }
+      run(function () {
+        console.log("Hello5");
+      });
+      */
+      /*
+      setTimeout(function () {
+        console.log("Time out");
+      }, 3000);
+
+      console.log("next line");
+
+      setInterval(function () {
+        console.log("intervel");
+      }, 3000);
+
+      console.log("next line 2");
+      */
+
+      ["make dinner", "make dishes", "watch youtube"].forEach(function (
+        value,
+        index
+      ) {
+        if (value === "make dishes") {
+          return;
+        }
+
+        console.log(index);
+        console.log(value);
+      });
+    </script>
+  </body>
+</html>
