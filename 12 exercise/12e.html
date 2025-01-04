@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="addCart();">Add to cart</button>
+    <p class="js-text"></p>
+    <script>
+      function addCart() {
+        const displayMassage = document.querySelector(".js-text");
+        displayMassage.innerHTML = "Added";
+
+        setTimeout(function () {
+          displayMassage.innerHTML = " ";
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>
