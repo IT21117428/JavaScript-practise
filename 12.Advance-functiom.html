@@ -6,7 +6,20 @@
     <title>Document</title>
   </head>
   <body>
+    <button class="js-button">Click</button>
     <script>
+      const buttonElement = document.querySelector(".js-button");
+      const eventListener = () => {
+        console.log("click");
+      };
+      buttonElement.addEventListener("click", eventListener);
+
+      buttonElement.removeEventListener("click", eventListener);
+
+      buttonElement.addEventListener("click", () => {
+        console.log("click2");
+      });
+
       /*
       function greeting() {
         console.log("Hello");
@@ -40,8 +53,7 @@
       run(function () {
         console.log("Hello5");
       });
-      */
-      /*
+
       setTimeout(function () {
         console.log("Time out");
       }, 3000);
@@ -53,19 +65,43 @@
       }, 3000);
 
       console.log("next line 2");
-      */
 
-      ["make dinner", "make dishes", "watch youtube"].forEach(function (
-        value,
-        index
-      ) {
-        if (value === "make dishes") {
-          return;
+      ["make dinner", "make dishes", "watch youtube"].forEach(
+        (value, index) => {
+          if (value === "make dishes") {
+            return;
+          }
+
+          console.log(index);
+          console.log(value);
         }
+      );
 
-        console.log(index);
-        console.log(value);
-      });
+      const regularFunction = function (param, param2) {
+        console.log("Hello");
+        return 5;
+      };
+
+      const arrowFunction = (param, param2) => {
+        console.log("hello");
+        return 5;
+      };
+
+      arrowFunction();
+
+      const oneParam = (param) => {
+        console.log(param + 1);
+      };
+
+      oneParam(2);
+
+      const oneLine = () => 2 + 2;
+
+      const object2 = {
+        methord: () => {},
+        methord() {},
+      };
+      */
     </script>
   </body>
 </html>
