@@ -6,20 +6,23 @@
     <title>Document</title>
   </head>
   <body>
-    <button class="js-button" onclick="displayMessage();">Add to Cart</button>
+    <button class="js-button">Add to Cart</button>
     <p class="message"></p>
     <script>
+      const buttonEle = document.querySelector(".js-button");
+      const message = document.querySelector(".message");
+
       let timeOutId;
-      function displayMessage() {
-        const message = document.querySelector(".message");
+
+      buttonEle.addEventListener("click", () => {
         message.innerHTML = "Added";
 
         clearTimeout(timeOutId);
 
-        timeOutId = setTimeout(function () {
+        timeOutId = setTimeout(() => {
           message.innerHTML = "";
         }, 1000);
-      }
+      });
     </script>
   </body>
 </html>

@@ -6,17 +6,18 @@
     <title>Document</title>
   </head>
   <body>
-    <button onclick="addCart();">Add to cart</button>
+    <button class="js-button">Add to cart</button>
     <p class="js-text"></p>
     <script>
-      function addCart() {
-        const displayMassage = document.querySelector(".js-text");
+      const buttonEle = document.querySelector(".js-button");
+      const displayMassage = document.querySelector(".js-text");
+      buttonEle.addEventListener("click", () => {
         displayMassage.innerHTML = "Added";
 
-        setTimeout(function () {
+        setTimeout(() => {
           displayMassage.innerHTML = " ";
         }, 2000);
-      }
+      });
     </script>
   </body>
 </html>
